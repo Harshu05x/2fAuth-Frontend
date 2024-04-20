@@ -64,8 +64,8 @@ const LoginPage = () => {
         (error.response &&
           error.response.data &&
           error.response.data.message) ||
-        error.response.data.detail ||
-        error.message ||
+        error?.response?.data?.detail ||
+        error?.message ||
         error.toString();
       toast.error(resMessage, {
         position: "top-right",
