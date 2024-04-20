@@ -79,9 +79,9 @@ const LoginPage = () => {
 
   return (
     <section className="bg-ct-blue-600 min-h-screen grid place-items-center">
-      <div className="w-full">
+      <div className="w-full px-2 md:px-0">
         <h1 className="text-4xl lg:text-6xl text-center font-[600] text-ct-yellow-600 mb-4">
-          Welcome Back
+          Welcome Back to 2fAuth
         </h1>
         <h2 className="text-lg text-center mb-4 text-ct-dark-200">
           Login to have access

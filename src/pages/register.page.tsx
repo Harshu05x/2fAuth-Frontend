@@ -81,7 +81,7 @@ const RegisterPage = () => {
 
   return (
     <section className="py-8 bg-ct-blue-600 min-h-screen grid place-items-center">
-      <div className="w-full">
+      <div className="w-full px-2 md:px-0">
         <h1 className="text-4xl xl:text-6xl text-center font-[600] text-ct-yellow-600 mb-4">
           Welcome to 2fAuth
         </h1>

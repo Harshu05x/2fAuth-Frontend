@@ -15,6 +15,9 @@ const ProfilePage = () => {
   const navigate = useNavigate();
   const store = useStore();
   const user = store.authUser;
+  const firstName = user?.name.split(" ")[0];
+  const lastName = user?.name.split(" ")[1];
+  const imgSrc = `https://api.dicebear.com/5.x/initials/svg?seed=${firstName} ${lastName}`;
 
   const generateQrCode = async ({
     user_id,
@@ -95,15 +98,28 @@ const ProfilePage = () => {
   return (
     <>
       <section className="bg-ct-blue-600  min-h-screen pt-10">
-        <div className="max-w-4xl p-12 mx-auto bg-ct-dark-100 rounded-md h-[20rem] flex gap-20 justify-center items-start">
+        <div className="max-w-3xl p-12 mx-auto bg-ct-dark-100 rounded-md flex gap-6 justify-center items-start flex-col">
           <div className="flex-grow-2">
             <h1 className="text-2xl font-semibold">Profile Page</h1>
-            <div className="mt-8">
-              <p className="mb-4"><span className=" font-bold">ID:</span> {user?.id}</p>
-              <p className="mb-4"><span className=" font-bold">Name:</span> {user?.name}</p>
-              <p className="mb-4"><span className=" font-bold">Email:</span> {user?.email}</p>
+            <div className="mt-8 flex gap-4 items-center"> 
+              <div className=" flex justify-center items-center">
+                <img src={imgSrc} alt="profile" className="h-20 w-20 rounded-2xl border-2 border-black" />
+              </div>
+              <div className=" flex flex-col gap-2">
+                <p className=""><span className=" font-bold">ID:</span> {user?.id}</p>
+                <p className=""><span className=" font-bold">Name:</span> {user?.name}</p>
+                <p className=""><span className=" font-bold">Email:</span> {user?.email}</p>
+                <p className=""><span className=" font-bold">2FA:</span>
+                  {
+                    user?.otp_enabled ? 
+                    <span className="text-green-500"> Enabled</span> :
+                    <span className="text-red-500"> Disabled</span>
+                  }
+                </p>
+              </div>
             </div>
           </div>
+          <div className="w-full border border-gray-300"></div>
           <div>
             <h3 className="text-2xl font-semibold">
               Mobile App Authentication (2FA)
