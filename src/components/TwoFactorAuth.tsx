@@ -97,10 +97,10 @@ const TwoFactorAuth: FC<TwoFactorAuthProps> = ({
   return (
     <div
       aria-hidden={true}
-      className="overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full bg-[#222] bg-opacity-50"
+      className="overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full inset-0 bg-[#222] bg-opacity-50"
       // onClick={closeModal}
     >
-      <div className="relative p-4 w-full max-w-xl h-full md:h-auto left-1/2 -translate-x-1/2">
+      <div className="relative p-4 w-full max-w-xl left-1/2 -translate-x-1/2">
         <div className="relative bg-white rounded-lg shadow">
           <h3 className={styles.heading3}>Two-Factor Authentication (2FA)</h3>
           {/* Modal body */}
