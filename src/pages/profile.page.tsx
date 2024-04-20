@@ -97,12 +97,12 @@ const ProfilePage = () => {
 
   return (
     <>
-      <section className="bg-ct-blue-600  min-h-screen pt-10">
+      <section className="bg-ct-blue-600  min-h-screen pt-10 px-4">
         <div className="max-w-3xl p-12 mx-auto bg-ct-dark-100 rounded-md flex gap-6 justify-center items-start flex-col">
           <div className="flex-grow-2">
             <h1 className="text-2xl font-semibold">Profile Page</h1>
-            <div className="mt-8 flex gap-4 items-center"> 
-              <div className=" flex justify-center items-center">
+            <div className="mt-8 flex gap-4 sm:items-center flex-col sm:flex-row"> 
+              <div className=" flex justify-start items-center h-20 w-20">
                 <img src={imgSrc} alt="profile" className="h-20 w-20 rounded-2xl border-2 border-black" />
               </div>
               <div className=" flex flex-col gap-2">
